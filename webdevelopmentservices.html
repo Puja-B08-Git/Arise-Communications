@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from Arise Communications-html-v2.vercel.app/single-index6.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Mar 2025 10:49:32 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- ✅ Add these meta tags -->
+    <meta name="description" content="Professional web development services by Arise Communications. We build responsive, modern websites for businesses of all sizes.">
+    <meta name="keywords" content="web development, Arise Communications, website design, responsive websites, Website development in pune, UI/UX Design Services, App Development Services in pune, E-commerce Development Services, Wordpress Website Development, Shopify Store Services, Website Development in pune">
+    <meta name="author" content="Arise Communications">
+
+    <title>Web Development - Arise Communications</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+    <!--=====FAB ICON=======-->
+    <link rel="shortcut icon" href="assets/img/logo/arise-fav.png" type="image/x-icon">
+
+    <!--===== CSS LINK =======-->
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/aos.css">
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/plugins/mobile.css">
+    <link rel="stylesheet" href="assets/css/plugins/owlcarousel.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/sidebar.css">
+    <link rel="stylesheet" href="assets/css/plugins/slick-slider.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--=====  JS SCRIPT LINK =======-->
+    <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+
+      <style>
+        /* Header Slider Styles */
+        .header-slider-container {
+          width: 100%;
+          max-width: 800px;
+          height: 550px;
+          transform-style: preserve-3d;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          margin: 0 auto;
+        }
+
+        .header-slider-container input[type=radio] {
+          display: none;
+        }
+
+        .cards {
+          position: relative;
+          width: 100%;
+          height: 500px;
+          margin-bottom: 20px;
+          perspective: 1000px;
+        }
+
+        .card {
+          position: absolute;
+          width: 80%;
+          height: 100%;
+          left: 0;
+          right: 0;
+          margin: auto;
+          transition: transform 0.4s ease;
+          cursor: pointer;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          transform-style: preserve-3d;
+        }
+
+        .card img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+
+        /* Positioning */
+        #item-1:checked ~ .cards #slide-1,
+        #item-2:checked ~ .cards #slide-2,
+        #item-3:checked ~ .cards #slide-3,
+        #item-4:checked ~ .cards #slide-4 {
+          transform: translateX(0) scale(1);
+          opacity: 1;
+          z-index: 1;
+        }
+
+        #item-1:checked ~ .cards #slide-3,
+        #item-2:checked ~ .cards #slide-4,
+        #item-3:checked ~ .cards #slide-1,
+        #item-4:checked ~ .cards #slide-2 {
+          transform: translateX(-40%) scale(0.8);
+          opacity: 0.4;
+          z-index: 0;
+        }
+
+        #item-1:checked ~ .cards #slide-2,
+        #item-2:checked ~ .cards #slide-3,
+        #item-3:checked ~ .cards #slide-4,
+        #item-4:checked ~ .cards #slide-1 {
+          transform: translateX(40%) scale(0.8);
+          opacity: 0.4;
+          z-index: 0;
+        }
+
+        .slider-info {
+          width: 100%;
+          max-width: 500px;
+          height: 80px;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .info {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          transition: transform 0.4s ease;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        .title {
+          color: #403d40;
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+
+        .subtitle {
+          font-size: 16px;
+          color: #c6c5c6;
+        }
+
+        #item-1:checked ~ .slider-info #info-1,
+        #item-2:checked ~ .slider-info #info-2,
+        #item-3:checked ~ .slider-info #info-3,
+        #item-4:checked ~ .slider-info #info-4 {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        #item-2:checked ~ .slider-info #info-1,
+        #item-3:checked ~ .slider-info #info-2,
+        #item-4:checked ~ .slider-info #info-3,
+        #item-1:checked ~ .slider-info #info-4 {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+
+        #item-3:checked ~ .slider-info #info-1,
+        #item-4:checked ~ .slider-info #info-2,
+        #item-1:checked ~ .slider-info #info-3,
+        #item-2:checked ~ .slider-info #info-4 {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .header-slider-container {
+            height: 400px;
+          }
+          
+          .cards {
+            height: 300px;
+          }
+          
+          .card {
+            width: 80%;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .header-slider-container {
+            height: 350px;
+          }
+          
+          .cards {
+            height: 250px;
+          }
+          
+          .card {
+            width: 90%;
+          }
+          
+          .title {
+            font-size: 20px;
+          }
+          
+          .subtitle {
+            font-size: 14px;
+          }
+        }
+    </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-39H4HYN7SN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-39H4HYN7SN');
+</script>
+
+<body class="homepage4-body">
+
+   <!--===== PRELOADER STARTS =======-->
+  <div class="preloader preloader10">
+    <div class="loading-container">
+      <div class="loading"></div>
+      <div id="loading-icon"><img src="assets/img/logo/arise-fav.png" alt=""></div>
+    </div>
+  </div>
+  <!--===== PRELOADER ENDS =======-->
+
+    <!--===== PROGRESS STARTS=======-->
+    <div class="paginacontainer">
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+    </div>
+    <!--===== PROGRESS ENDS=======-->
+
+    <!--=====HEADER START=======-->
+    <header>
+        <div class="header-area homepage4 header header-sticky d-none d-lg-block " id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav id="navbar-example2" class="navbar">
+                            <div class="header-elements">
+                                <div class="site-logo">
+                                    <a href="index.html"><img src="assets/img/logo/LOGO-01.png" 
+                                            alt="" width="190px" height="auto"></a>
+                                </div>
+                                <div class="main-menu">
+                                    <ul>
+                                        <li><a href="index.html">Home</i></a>
+                                        <li class="nav-item"><a href="about.html"
+                                                class="nav-link active"><span>About</span></a></li>
+                                                
+                                                <li><a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                              <ul class="dropdown-padding">
+                                <li><a href="webdevelopmentservices.html">Web Development</a></li>
+                                
+                                <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                <li><a href="content-marketing.html">Content Marketing</a></li>
+                                <li><a href="SEOservice.html">SEO & Analytics</a></li>
+                             
+                                <li><a href="Brand-Building.html">Brand Building</a></li>
+                                 <li><a href="Packaging.html">Packaging</a></li>
+                              </ul>
+                            </li>
+                                        <li class="nav-item"><a href="project.html" class="nav-link"><span>Projects
+                                                    </span></a></li>
+                                        <li class="nav-item"><a href="blog.html" class="nav-link"><span>Blogs</span></a>
+                                        </li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-area">
+                                    <a href="tel:+91 7057651519" class="header-btn1">Get Started <span><i
+                                          class="fa-solid fa-arrow-right"></i></span></a>
+                                  </div>
+                    
+                                  <div class="header-search-form-wrapper">
+                                    <div class="tx-search-close tx-close"><i class="fa-solid fa-xmark"></i></div>
+                                    <div class="header-search-container">
+                                      <form role="search" class="search-form">
+                                        <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+                                        <button type="submit" class="search-submit"><img src="assets/img/icons/search-icons1.svg"
+                                            alt=""></button>
+                                      </form>
+                                    </div>
+                                  </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--=====HEADER END =======-->
+
+    <!--===== MOBILE HEADER STARTS =======-->
+    <div class="mobile-header mobile-haeder1 d-block d-lg-none">
+        <div class="container-fluid">
+          <div class="col-12">
+            <div class="mobile-header-elements">
+              <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/logo/LOGO-01.png" alt="" height="50px" width="auto"></a>
+              </div>
+              <div class="mobile-nav-icon dots-menu">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-sidebar mobile-sidebar1">
+        <div class="logosicon-area">
+          <div class="logos">
+            <img src="assets/img/logo/LOGO-01.png" alt="" style="height: 50px; width: 100px;">
+          </div>
+          <div class="menu-close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="mobile-nav mobile-nav1">
+          <ul class="mobile-nav-list nav-list1">
+            <li><a href="index.html">Home </a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="404-3.html">Services</a>
+              <ul class="sub-menu">
+                <li><a href="webdevelopmentservices.html">Web Development</a></li>
+                <li><a href="ui-ux-design.html">UI/UX Design</a></li>
+                <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                <li><a href="content-marketing.html">Content Marketing</a></li>
+                <li><a href="SEOservice.html">SEO</a></li>
+                <li><a href="SMOservices.html">SMO</a></li>
+                <li><a href="Brand-Building.html">Brand Building</a></li>
+              </ul>
+            </li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+    
+          <div class="allmobilesection">
+            <div class="single-footer">
+              <div class="footer1-contact-info">
+                <div class="contact-info-single">
+                  <div class="contact-info-icon">
+                   
+                  </div>
+                  <div class="contact-info-text">
+                  </div>
+                </div>
+    
+                <div class="contact-info-single">
+                  <div class="contact-info-icon">
+                   
+                  </div>
+                  <div class="contact-info-text">
+                  </div>
+                </div>
+    
+                <div class="single-footer">
+                  
+    
+                  <div class="contact-info-single">
+                    <div class="contact-info-icon">
+                    </div>
+                    <div class="contact-info-text">
+                    </div>
+                  </div>
+    
+                </div>
+                <div class="single-footer">
+                  <h3>Social Links</h3>
+    
+                  <div class="social-links-mobile-menu">
+                    <ul>
+                      <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                      <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                      <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                      <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--===== MOBILE HEADER STARTS =======-->
+
+   <!--===== HERO AREA STARTS =======-->
+<div class="hero7-section-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6" style="padding: 300px 0 150px;">
+        <div class="hero7-header heading3">
+          <h1 class="text-anime-style-3">Achieve Digital Excellence with Our Tailored Solutions</h1>
+          <p>Boost your business with our cutting-edge digital marketing and SEO services. Our experienced team is committed to helping you reach your target audience.</p>
+          <div class="space32"></div>
+          <div class="btn-area1">
+                        <a href="contact.html" class="header-btn25">Get Started Today</a>
+                        <a href="https://www.youtube.com/watch?v=Y8XpQpW5OVY" class="header-btn25 btn2 popup-youtube"> Book A Free Consultation</a>
+                    </div>
+          <div class="space32"></div>
+          <div class="author-images">
+            <div class="img1">
+              <img src="assets/img/all-images/author-img1.png" alt="">
+            </div>
+            <div class="stars">
+              <ul>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+              </ul>
+              <p>850+ Reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ <div class="col-lg-6" style="height: 100vh;">
+             <!-- gallery section start -->
+  
+        
+   <div class="scroll-container-vertical">
+  <div class="scroll-column scroll-up">
+    <img src="assets/img/mockup-img/mockup-1.png" alt="Image 1">
+    <img src="assets/img/mockup-img/Get Trendy (4).png" alt="Image 2">
+    <img src="assets/img/mockup-img/Get Trendy (4).png" alt="Image 3">
+    <img src="assets/img/mockup-img/Get Trendy (4).png" alt="Image 1">
+    <img src="assets/img/mockup-img/mockup-5.png" alt="Image 2">
+    <img src="assets/img/mockup-img/motomaniacs.png" alt="Image 3">
+    <!-- Add more images as needed -->
+  </div>
+</div>
+
+  
+    
+     <!-- gallery section end -->
+
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== HERO AREA ENDS =======-->
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary rounded-2" tabindex="0">
+       
+
+ <!--===== SERVICE AREA STARTS =======-->
+<div class="service12-section-area sp1" style="margin-bottom: 50px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="service-header space-margin60 heading18">
+          <h5>Our Service</h5>
+          <div class="space16"></div>
+          <h2>Comprehensive Consulting</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="service-slider owl-carousel">
+        <div class="service12-boxarea">
+          <div class="icons">
+            <img src="assets/img/icons/web-service/icon-2.png" alt="">
+          </div>
+          <div class="space20"></div>
+          <div class="content">
+            <a >Frontend & Backend Development</a>
+            <div class="space16"></div>
+            <p>A simple static website effectively showcasing the online presence of businesses and Create a robust database to manage the website data for efficient server-side development.</p>
+            <div class="space24"></div>
+           
+          </div>
+        </div>
+
+        <div class="service12-boxarea">
+          <div class="icons">
+            <img src="assets/img/icons/web-service/icon-2.png" alt="">
+          </div>
+          <div class="space20"></div>
+          <div class="content">
+            <a >Fully-Responsive User Friendly Interface</a>
+            <div class="space16"></div>
+            <p>Responsive web design ensures that your website automatically adapts to different screen sizes and devices—whether it's a desktop, tablet, or smartphone. This creates a seamless and enjoyable experience for every user.</p>
+            <div class="space24"></div>
+           
+          </div>
+        </div>
+
+        <div class="service12-boxarea">
+          <div class="icons">
+            <img src="assets/img/icons/web-service/icon-2.png" alt="">
+          </div>
+          <div class="space20"></div>
+          <div class="content">
+            <a >App Development</a>
+            <div class="space16"></div>
+            <p>We specialize in developing high-quality mobile apps for Android and iOS. Our team combines intuitive design with powerful features to deliver fast, reliable, and user-friendly applications that meet your business goals.</p>
+            <div class="space24"></div>
+           
+          </div>
+        </div>
+
+        <div class="service12-boxarea">
+          <div class="icons">
+            <img src="assets/img/icons/web-service/icon-2.png" alt="">
+          </div>
+          <div class="space20"></div>
+          <div class="content">
+            <a>UI/UX Design</a>
+            <div class="space16"></div>
+            <p>We create user-friendly UI/UX designs that boost experience, engagement, and usability. From wireframes to final visuals, our designs are intuitive, responsive, and aligned for a seamless user journey across devices.</p>
+            <div class="space24"></div>
+           
+          </div>
+        </div>
+
+        <div class="service12-boxarea" data-aos="zoom-out" data-aos-duration="1000">
+          <div class="icons">
+            <img src="assets/img/icons/web-service/icon-2.png" alt="">
+          </div>
+          
+          <div class="space20"></div>
+          <div class="content">
+            <a >Payment Gateway Integration</a>
+            <div class="space16"></div>
+            <p>A powerful online payment platform that enables you to receive payments faster with complete security. Accept payments through multiple methods—including Credit/Debit Cards, UPI, and flexible Pay Later options</p>
+            <div class="space24"></div>
+           
+          </div>
+        </div>
+
+        <div class="service12-boxarea" data-aos="zoom-out" data-aos-duration="1000">
+          <div class="icons">
+            <img src="assets/img/icons/web-service/icon-2.png" alt="">
+          </div>
+          
+          <div class="space20"></div>
+          <div class="content">
+            <a >Live Chat Integration</a>
+            <div class="space16"></div>
+            <p>We provide live chat integration to boost engagement and support. Enable real-time interaction, fast responses, and a better user experience to connect with visitors and increase conversions.</p>
+            <div class="space24"></div>
+           
+          </div>
+        </div>
+
+        <div class="service12-boxarea" data-aos="zoom-out" data-aos-duration="1000">
+          <div class="icons">
+            <img src="assets/img/icons/web-service/icon-2.png" alt="">
+          </div>
+          
+          <div class="space20"></div>
+          <div class="content">
+            <a >Wordpress and Woo-Commerce</a>
+            <div class="space16"></div>
+            <p>We offer WordPress and WooCommerce solutions to build dynamic websites and online stores. From custom themes to plugin integration, we ensure smooth performance, easy management, and a seamless shopping experience.</p>
+            <div class="space24"></div>
+           
+          </div>
+        </div>
+
+        <div class="service12-boxarea" data-aos="zoom-out" data-aos-duration="1000">
+          <div class="icons">
+            <img src="assets/img/icons/web-service/icon-2.png" alt="">
+          </div>
+          
+          <div class="space20"></div>
+          <div class="content">
+            <a >CRM Software</a>
+            <div class="space16"></div>
+            <p>We offer customizable CRM software to streamline your sales, marketing, and customer service. Our solution helps manage relationships, track leads, automate follow-ups, and gain insights—boosting efficiency and business growth.</p>
+            <div class="space24"></div>
+           
+          </div>
+        </div>
+
+        <div class="service12-boxarea" data-aos="zoom-out" data-aos-duration="1000">
+          <div class="icons">
+            <img src="assets/img/icons/web-service/icon-2.png" alt="">
+          </div>
+          
+          <div class="space20"></div>
+          <div class="content">
+            <a >Support & Maintenance</a>
+            <div class="space16"></div>
+            <p>We provide reliable support and maintenance for web, app, and WordPress development. From regular updates and performance checks to bug fixes and security monitoring, we ensure your digital platforms perform at their best.</p>
+            <div class="space24"></div>
+           
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== SERVICE AREA ENDS =======-->
+<div class="space100 d-lg-block d-none"></div>
+<div class="space80 d-lg-block d-none"></div>
+<!--===== WORK AREA STARTS =======-->
+<div class="project12-section-area sp1">
+  <div class="container">
+    
+  </div>
+</div>
+<!--===== WORK AREA ENDS =======-->
+
+         <!--===== SERVICE AREA STARTS =======-->
+  <!-- <div class="service4-section-area sp1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 m-auto">
+          <div class="service4-header heading8 text-center">
+            <h5 data-aos="fade-up" data-aos-duration="1000"><img src="assets/img/icons/logo-icons3.svg" alt="">Our
+              Service</h5>
+            <h2 class="text-anime-style-1">Our Comprehensive Suite Of Digital Marketing <span>Services. <img
+                  src="assets/img/elements/small-line.png" alt=""></span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="service-auhtor-boxes-area">
+            <div class="bg-images">
+              <div class="img1">
+                <img src="assets/img/bg/bg-blue.png" alt="" class="pulse-border">
+              </div>
+              <div class="icons" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="assets/img/icons/l" alt="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-duration="1000">
+                <div class="service-box-area">
+                  <div class="icons-area">
+                    <div class="icons">
+                      <img src="assets/img/icons/web-service/icon-2.png" alt="">
+                    </div>
+                    <div class="number">
+                      <h4>01</h4>
+                    </div>
+                  </div>
+                  <div class="content-area">
+                    <a href="service1.html">Frontend & Backend Development</a>
+                    <p>A simple static website effectively showcasing the online presence of businesses and Create a robust database to manage the website data for efficient server-side development.</p>
+                    
+                  </div>
+                </div>
+              </div>
+             <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-duration="1000">
+                <div class="service-box-area">
+                  <div class="icons-area">
+                    <div class="icons">
+                      <img src="assets/img/icons/web-service/icon-2.png" alt="">
+                    </div>
+                    <div class="number">
+                      <h4>02</h4>
+                    </div>
+                  </div>
+                  <div class="content-area">
+                    <a href="service1.html">Fully-Responsive User Friendly Interface</a>
+                    <p>Responsive web design ensures that your website automatically adapts to different screen sizes and devices—whether it's a desktop, tablet, or smartphone. This creates a seamless and enjoyable experience for every user.</p>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-duration="1200">
+                <div class="service-box-area">
+                  <div class="icons-area">
+                    <div class="icons">
+                      <img src="assets/img/icons/web-service/icon-2.png" alt="">
+                    </div>
+                    <div class="number">
+                      <h4>03</h4>
+                    </div>
+                  </div>
+                  <div class="content-area">
+                    <a href="service1.html">App Development</a>
+                    <p>We specialize in developing high-quality mobile apps for Android and iOS. Our team combines intuitive design with powerful features to deliver fast, reliable, and user-friendly applications that meet your business goals.</p>
+                    
+                  </div>
+                </div>
+              </div>
+           
+              <div class="space24"></div>
+              <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="service-box-area">
+                  <div class="icons-area">
+                    <div class="icons">
+                      <img src="assets/img/icons/web-service/icon-2.png" alt="">
+                    </div>
+                    <div class="number">
+                      <h4>04</h4>
+                    </div>
+                  </div>
+                  <div class="content-area">
+                    <a href="service1.html">UI/UX Design</a>
+                    <p>We create user-friendly UI/UX designs that boost experience, engagement, and usability. From wireframes to final visuals, our designs are intuitive, responsive, and aligned for a seamless user journey across devices. </p>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="service-box-area">
+                  <div class="icons-area">
+                    <div class="icons">
+                      <img src="assets/img/icons/web-service/icon-2.png" alt="">
+                    </div>
+                    <div class="number">
+                      <h4>05</h4>
+                    </div>
+                  </div>
+                  <div class="content-area">
+                    <a href="service1.html">Payment Gateway Integration</a>
+                    <p>A powerful online payment platform that enables you to receive payments faster with complete security. Accept payments through multiple methods—including Credit/Debit Cards, UPI, and flexible Pay Later options</p>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="service-box-area">
+                  <div class="icons-area">
+                    <div class="icons">
+                      <img src="assets/img/icons/web-service/icon-2.png" alt="">
+                    </div>
+                    <div class="number">
+                      <h4>06</h4>
+                    </div>
+                  </div>
+                  <div class="content-area">
+                    <a >Live Chat Integration</a>
+                    <p>We provide live chat integration to boost engagement and support. Enable real-time interaction, fast responses, and a better user experience to connect with visitors and increase conversions. </p>
+                   
+                  </div>
+                </div>
+              </div>
+
+               <div class="space24"></div>
+              <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="service-box-area">
+                  <div class="icons-area">
+                    <div class="icons">
+                      <img src="assets/img/icons/web-service/icon-2.png" alt="">
+                    </div>
+                    <div class="number">
+                      <h4>07</h4>
+                    </div>
+                  </div>
+                  <div class="content-area">
+                    <a >Wordpress and Woo-Commerce</a>
+                    <p>We offer WordPress and WooCommerce solutions to build dynamic websites and online stores. From custom themes to plugin integration, we ensure smooth performance, easy management, and a seamless shopping experience</p>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="service-box-area">
+                  <div class="icons-area">
+                    <div class="icons">
+                      <img src="assets/img/icons/web-service/icon-2.png" alt="">
+                    </div>
+                    <div class="number">
+                      <h4>08</h4>
+                    </div>
+                  </div>
+                  <div class="content-area">
+                    <a >CRM Software</a>
+                    <p>We offer customizable CRM software to streamline your sales, marketing, and customer service. Our solution helps manage relationships, track leads, automate follow-ups, and gain insights—boosting efficiency and business growth.</p>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="service-box-area">
+                  <div class="icons-area">
+                    <div class="icons">
+                      <img src="assets/img/icons/web-service/icon-2.png" alt="">
+                    </div>
+                    <div class="number">
+                      <h4>09</h4>
+                    </div>
+                  </div>
+                  <div class="content-area">
+                    <a>Support & Maintenance</a>
+                    <p>We provide reliable support and maintenance for web, app, and WordPress development. From regular updates and performance checks to bug fixes and security monitoring, we ensure your digital platforms perform at their best.</p>
+                   
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!--===== SERVICE AREA ENDS =======-->
+
+       
+
+
+
+        <!--===== WORK AREA STARTS =======-->
+         <div class="works4-section-area sp2 bg-white" id="works" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="works4-header heading8">
+                            <h5 data-aos="fade-up" data-aos-duration="800">Core Highlights
+                            </h5>
+                            <h2 class="text-anime-style-1">High-Performance Websites for <span>Business Growth <img
+                                        src="assets/img/elements/Big-line.png" alt=""></span></h2>
+                            <div class="space10 d-lg-block d-none"></div>
+                            <p data-aos="fade-up" data-aos-duration="1000">We create custom, creative website designs tailored to your needs, bringing your vision to life. <br class="d-lg-block d-none">
+                            </p> 
+                            <div class="space32"></div>
+                            <ul class="orange-bullets">
+                                <li ><i class="ri-arrow-right-circle-line"></i>Dynamic & user-friendly websites</li>
+                                <li> <i class="ri-arrow-right-circle-line"></i>SEO-optimized & secure solutions</li>
+                                <li><i class="ri-arrow-right-circle-line"></i>Seamless payment integration
+                                </li>
+                                <li><i class="ri-arrow-right-circle-line"></i>Live chat support for engagement</li>
+                            </ul>
+                            <div class="space32"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-6">
+                        <div class="case-images" data-aos="zoom-in" data-aos-duration="1000">
+                            <figure class="image-anime reveal">
+                                <img src="assets/img/banner/web.jpg" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div> 
+        <!--===== WORK AREA ENDS =======-->
+
+
+        <!--===== portfolio AREA STARTS =======-->
+        <div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12 p-class" >
+      <div class="img-1">
+        <img src="assets/img/mockup-img/Rohit Tilak.png" alt="">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 p-class">
+      <div class="img-1">
+        <img src="assets/img/mockup-img/Arise Build.png" alt="">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 p-class">
+      <div class="img-1">
+        <img src="assets/img/mockup-img/Arise Didital.png" alt="">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 p-class">
+      <div class="img-1">
+        <img src="assets/img/mockup-img/Get Trendy.png" alt="">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 p-class">
+      <div class="img-1">
+        <img src="assets/img/mockup-img/motomaniacs.png" alt="">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 p-class">
+      <div class="img-1">
+        <img src="assets/img/mockup-img/Aditya Car Wash.png" alt="">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 p-class">
+      <div class="img-1">
+        <img src="assets/img/mockup-img/website mockup 1.png" alt="">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 p-class">
+      <div class="img-1">
+        <img src="assets/img/mockup-img/website mockup 2.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+        <!--===== portfolio Area Ends =====-->
+      
+  <!--===== PRICING AREA STARTS =======-->
+  <div class="pricing-section-area  bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 m-auto">
+          <div class="pricing-header heading8 text-center mt-100">
+            <h5 data-aos="fade-up" data-aos-duration="1000"><img src="assets/img/icons/logo-icons3.svg" alt="">Pricing &
+              Plan</h5>
+            <h2 class="text-anime-style-1">Marketing <span>Pricing Plan <img src="assets/img/elements/small-line.png"
+                  alt=""></span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6" data-aos="flip-right" data-aos-duration="800">
+          <div class="pricing-boxarea">
+            <h4>Static Website</h4>
+            <p>Small businesses or startups looking to  <br class="d-lg-block d-none"> establish their
+              online presence.</p>
+            <!-- <h2>Basic Plan - Starter <span></span></h2> -->
+            <div class="space32"></div>
+            <div class="btn-area1">
+              <a href="pricing.html" class="header-btn12">Get A Quote <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="space32"></div>
+            <div class="list-area">
+              <h5>Service Include:</h5>
+              <ul>
+                           <li><img src="assets/img/icons/check9.svg" alt="" class="check9">1 - 5 Pages (or Single Page Website)</li>
+                            <li><img src="assets/img/icons/check9.svg" alt="" class="check9">Fully Responsive on Mobile, Tablet & Laptop</li>
+                            <li><img src="assets/img/icons/check9.svg" alt="" class="check9">1 - 2 Contact Us Form</li>
+                            <li><img src="assets/img/icons/check9.svg" alt="" class="check9">Simple & User Friendly Interface</li>
+                             <li><img src="assets/img/icons/check9.svg" alt="" class="check9">Google SEO Friendly</li>
+                        
+                        </ul>
+            </div>
+            <!-- <div class="space24"></div> -->
+            <!-- <p class="pera">Small businesses or startups looking to <br class="d-lg-block d-none"> establish their
+              online presence.</p> -->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-duration="1000">
+          <div class="pricing-boxarea active">
+            <h4>Dynamic Website</h4>
+             <p>Progresive businesses or startups looking to <br class="d-lg-block d-none"> establish their
+              online presence.</p>
+             <!-- <h1>Get A Quote <span></span></h1> -->
+            <div class="space32"></div>
+            <div class="btn-area1">
+              <a href="pricing.html" class="header-btn12">Get A Quote <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="space32"></div>
+            <div class="list-area">
+                        <h5>Service Include:</h5>
+                        <ul>
+                            <li><img src="assets/img/icons/check10.svg" alt="" class="check9">10 - 12 Pages Max</li>
+                            <li><img src="assets/img/icons/check10.svg" alt="" class="check9">Fully Responsive on Mobile, Tablet & Laptop</li>
+                            <li><img src="assets/img/icons/check10.svg" alt="" class="check9">1 - 2 Contact Us Form</li>
+                           
+                            <li><img src="assets/img/icons/check10.svg" alt="" class="check9">Simple & User Friendly Interface</li>
+                            <li><img src="assets/img/icons/check10.svg" alt="" class="check9">Whatsapp Chat Integration</li>
+                            <li><img src="assets/img/icons/check10.svg" alt="" class="check9">Google SEO Friendly</li>
+                            <li><img src="assets/img/icons/check10.svg" alt="" class="check9">Monthly Analytics Report</li>
+                        </ul>
+                    </div>
+            <!-- <div class="space24"></div>
+            <p class="pera">Small businesses or startups looking to <br class="d-lg-block d-none"> establish their
+              online presence.</p> -->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="flip-right" data-aos-duration="1200">
+          <div class="pricing-boxarea">
+            <h4>E-commerce Website</h4>
+            <p>Enterprises businesses or startups looking to <br class="d-lg-block d-none"> establish their
+              online presence.</p>
+             <!-- <h1>Get A Quote <span></span></h1> -->
+            <div class="space32"></div>
+            <div class="btn-area1">
+              <a href="pricing.html" class="header-btn12">Get A Quote <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="space32"></div>
+            <div class="list-area">
+              <h5>Service Include:</h5>
+              <ul>
+                            <li><img src="assets/img/icons/check9.svg" alt="" class="check9">Up to 10 Pages with 50-100 Product Entries</li>
+                            <li><img src="assets/img/icons/check9.svg" alt="" class="check9">Admin Panel for Inventory Management</li>
+                            <li><img src="assets/img/icons/check9.svg" alt="" class="check9">Fully Responsive on Mobile, Tablet & Laptop</li>
+                           
+                            <li><img src="assets/img/icons/check9.svg" alt="" class="check9">Payment Gateway Integration</li>
+                            <li><img src="assets/img/icons/check9.svg" alt="" class="check9">Whatsapp Chat Integration</li>
+                             <li><img src="assets/img/icons/check9.svg" alt="" class="check9">1 Contact Form</li>
+                            <li><img src="assets/img/icons/check9.svg" alt="" class="check9">Monthly Analytics Report</li>
+                        </ul>
+            </div>
+            <!-- <div class="space24"></div>
+            <p class="pera">Small businesses or startups looking to <br class="d-lg-block d-none"> establish their
+              online presence.</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== PRICING AREA ENDS =======-->
+
+        <!--===== CHOOSE AREA STARTS =======-->
+        <div class="choose-section-area sp8  position-relative" id="works" >
+  <div style="background-image: url('assets/img/bg/grey-bg-2.jpg'); 
+              opacity: 0.3; 
+              position: absolute; 
+              top: 0; left: 0; 
+              width: 100%; height: 100%; 
+              background-size: cover; 
+              background-position: top; 
+              z-index: -1;"></div>
+            <div class="container">
+                <div class="row align-items-center" style="height: 90vh;">
+                    <div class="col-lg-4 m-auto">
+                        <div class="service4-header heading8 align-text-top">
+                            <h5 data-aos="fade-up" data-aos-duration="800">SEO FAQ's </h5>
+                            <h2 class="text-anime-style-1">Your Questions<span> Answered. <img
+                                        src="assets/img/elements/small-line.png" alt=""></span></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 m-auto">
+                        <div class="accordian-tabs-area" style="padding: 0;">
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="space24"></div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            What types of websites do you develop?
+
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body body2">We develop a variety of websites, including
+                                            business websites, e-commerce stores, blogs, portfolio sites,CRM based software and custom web
+                                            applications, tailored to your specific needs.</div>
+                                    </div>
+                                </div>
+                                <div class="space24"></div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Which technologies do you use for website development?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body body2">We use modern technologies like HTML, CSS,
+                                            JavaScript, React, Node.js, PHP,Express.Js,Bootstraps,Tailwind,Python,Django and CMS platforms like WordPress to build
+                                            fast, secure, and scalable websites.</div>
+                                    </div>
+                                </div>
+                                <div class="space24"></div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                            aria-expanded="false" aria-controls="flush-collapseFour">
+                                            Do you provide mobile-friendly and responsive website designs?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body body2">Yes, all our websites are fully responsive and
+                                            optimized for mobile, tablet, and desktop users to ensure a seamless
+                                            experience across all devices.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space24"></div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                            aria-expanded="false" aria-controls="flush-collapseFive">
+                                            What is the cost of website development?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body body2">The cost depends on the complexity, features,
+                                            and design of the website. We offer customized packages to suit different
+                                            business needs and budgets.
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space24"></div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
+                                            aria-expanded="false" aria-controls="flush-collapseSix">
+                                            Do you provide website maintenance and support after development?
+
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body body2">Yes, we offer ongoing maintenance, updates,
+                                            security monitoring, and support services to keep your website running
+                                            smoothly and securely</div>
+                                    </div>
+                                </div>
+
+                                <div class="space24"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--===== CHOOSE AREA ENDS =======-->
+
+
+<!--===== CTA AREA STARTS =======-->
+<div class="cta-section-area">
+    <img src="assets/img/bg/cta-bg1.png" alt="" class="cta-bg1 aniamtion-key-2">
+            <img src="assets/img/bg/cta-bg2.png" alt="" class="cta-bg2 aniamtion-key-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 m-auto">  
+          <div class="cta-header-area text-center sp4 heading2">  
+            <h2 style="line-height: 55px;"> Take the next step. <br class="d-md-block d-none">  Let's Grow Your Business Together!</h2>
+            <div class="btn-area text-center">
+              <a href="contact.html" class="header-btn1">Contact Us <span><i class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== CTA AREA ENDS =======-->
+
+      <!--===== FOOTER AREA STARTS =======-->
+  <div class="footer1-section-area  position-relative" style="overflow: hidden;">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline
+    style="position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           background-position: center;
+           z-index: -1;
+           opacity: 0.5;">
+    <source src="assets/img/video/bg-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo-area2">
+            <img src="assets/img/logo/AC-logo.png" class="w-logo" alt="">
+            <ul class="mt-4">
+               <li><a href="arisecommunicationspune@gmail.com"><img src="assets/img/icons/email.svg"
+                    alt=""><span>arisecommunicationspune@gmail.com</span></a></li>
+                    <hr>
+                <li><a href="#"><img src="assets/img/icons/location.svg" alt=""><span>Sr. No.209, Anath Hindu Mahila
+                    Ashram,
+                    <br class="d-lg-block d-none"> Narayan Peth, Pune - 411030
+                    </span></a></li>
+                     <hr>
+               <li><a href="tel:+91 9096321038"><img src="assets/img/icons/phone.svg" alt=""><span>+91 90963
+                    21038</span></a></li>
+            
+            </ul>
+           
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-logo-area1">
+            <h3> Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="project.html">Portfolio</a></li>
+              <li><a href="assets/AC_Brochure.pdf" target="_blank">Brochure</a></li>
+               <li><a href="blog.html">Blogs</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              
+          </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-logo-area1">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="webdevelopmentservices.html">Web Development</a></li>
+              <li><a href="digital-marketing.html">Digital Marketing</a></li>
+              <li><a href="content-marketing.html">Content Marketing</a></li>
+              
+              <li><a href="SEOservice.html">SEO & Analytics</a></li>
+              <li><a href="Brand-Building.html">Brand Building</a></li>
+               <li><a href="project.html">Packaging</a></li>
+          </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="footer-logo-area1">
+              <h3>Subscribe Our Newsletter</h3>
+              <form action="#">
+                <input type="text" placeholder="Enter Your email">
+                <button class="header-btn1"> Subscribe <span><i class="fa-solid fa-arrow-right"></i></span></button>
+              </form>
+            </div>
+           <div class="footer-logo-area">
+          <ul>
+              <li><a href="https://www.facebook.com/profile.php?id=61571801045812" target="_blank"><img src="assets/img/icons/facebook6.svg" alt=""></a></li>
+              <li><a href="
+https://www.instagram.com/arise.communications/" target="_blank"><img src="assets/img/icons/instagram6.svg" alt=""></a></li>
+              <li><a href="https://www.linkedin.com/company/arisecommunications/?viewAsMember=true" target="_blank"><img src="assets/img/icons/linkedin6.svg" alt=""></a></li>
+              <li><a href="https://www.youtube.com/channel/UCOzH-mj8aUSGICTSxB7U8Bw" target="_blank"><img src="assets/img/icons/play.svg" alt="" width="20px"></a></li>
+            </ul>
+            </div>
+          </div>
+      </div>
+      <div class="space80 d-lg-block d-none"></div>
+      <div class="space40 d-lg-none d-block"></div>
+    </div>
+      <div class="container-fluid" style="background: var(--ddd, linear-gradient(91deg, #3d5cac 0.78%, #98437c 99.88%));">
+        <div class="col-lg-12" >
+          <div class="copyright-area ">
+            <div class="pera">
+              <p >© 2025 Arise Communications All Rights Reserved | Design and Developed by <strong> Arise Communications.</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== FOOTER AREA ENDS =======-->
+    </div>
+
+    <!--===== JS SCRIPT LINK =======-->
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/fontawesome.js"></script>
+    <script src="assets/js/plugins/aos.js"></script>
+    <script src="assets/js/plugins/counter.js"></script>
+    <script src="assets/js/plugins/gsap.min.js"></script>
+    <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+    <script src="assets/js/plugins/Splitetext.js"></script>
+    <script src="assets/js/plugins/sidebar.js"></script>
+    <script src="assets/js/plugins/magnific-popup.js"></script>
+    <script src="assets/js/plugins/mobilemenu.js"></script>
+    <script src="assets/js/plugins/owlcarousel.min.js"></script>
+    <script src="assets/js/plugins/gsap-animation.js"></script>
+    <script src="assets/js/plugins/nice-select.js"></script>
+    <script src="assets/js/plugins/waypoints.js"></script>
+    <script src="assets/js/plugins/slick-slider.js"></script>
+    <script src="assets/js/plugins/circle-progress.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+  // Auto toggle body class on radio change
+  $('input').on('change', function () {
+    $('body').toggleClass('blue');
+  });
+
+  // Auto-slide functionality
+  let current = 1;
+  const total = 3; // Number of cards
+  setInterval(() => {
+    current++;
+    if (current > total) current = 1;
+    document.getElementById(`item-${current}`).checked = true;
+  }, 2000);
+</script>
+
+
+</body>
+
+<!-- Mirrored from Arise Communications-html-v2.vercel.app/single-index6.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Mar 2025 10:49:32 GMT -->
+
+</html>
