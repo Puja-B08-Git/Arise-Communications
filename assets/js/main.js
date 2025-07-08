@@ -779,81 +779,61 @@ if ($('.text-anime-style-1').length) {
 
 
 //========== video muted ============= //
-  const video = document.getElementById("mediaVideo");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        video.muted = false;
-        video.play();
-      } else {
-        video.pause();
-        video.muted = true;
-      }
-    });
-  }, {
-    threshold: 0.6 // 60% in view
-  });
-
-  observer.observe(document.getElementById("mediaSection"));
-
-
-
-
+ 
 
 //========== PRELOADER AREA ============= //
 
 /*-------------------- 16. progressbar ----------------------------*/
-{
-  function animateElements() {
-    $('.progressbar').each(function () {
-      var elementPos = $(this).offset().top;
-      var topOfWindow = $(window).scrollTop();
-      var percent = $(this).find('.circle').attr('data-percent');
-      var percentage = parseInt(percent, 10) / parseInt(100, 10);
-      var animate = $(this).data('animate');
-      if (elementPos < topOfWindow + $(window).height() - 10 && !animate) {
-        $(this).data('animate', true);
-        $(this).find('.circle').circleProgress({
-          startAngle: -Math.PI / 2,
-          value: percent / 100,
-          size: 180,
-          thickness: 10,
-          emptyFill: "#222326",
-          fill: {
-            color: '#FFFFFF'
-          }
-        }).on('circle-animation-progress', function (event, progress, stepValue) {
-          $(this).find('div').text((stepValue*100).toFixed() + "%");
-        }).stop();
-      }
-    });
-  }
+// {
+//   function animateElements() {
+//     $('.progressbar').each(function () {
+//       var elementPos = $(this).offset().top;
+//       var topOfWindow = $(window).scrollTop();
+//       var percent = $(this).find('.circle').attr('data-percent');
+//       var percentage = parseInt(percent, 10) / parseInt(100, 10);
+//       var animate = $(this).data('animate');
+//       if (elementPos < topOfWindow + $(window).height() - 10 && !animate) {
+//         $(this).data('animate', true);
+//         $(this).find('.circle').circleProgress({
+//           startAngle: -Math.PI / 2,
+//           value: percent / 100,
+//           size: 180,
+//           thickness: 10,
+//           emptyFill: "#222326",
+//           fill: {
+//             color: '#FFFFFF'
+//           }
+//         }).on('circle-animation-progress', function (event, progress, stepValue) {
+//           $(this).find('div').text((stepValue*100).toFixed() + "%");
+//         }).stop();
+//       }
+//     });
+//   }
 
-  // Show animated elements
-  animateElements();
-  $(window).scroll(animateElements);
-};
-
-
-if($('.reveal').length)
-{gsap.registerPlugin(ScrollTrigger);
-  let revealContainers=document.querySelectorAll(".reveal");
-  revealContainers.forEach((container)=>{let image=container.querySelector("img");
-  let tl=gsap.timeline({scrollTrigger:{trigger:container,toggleActions:"play none none none"}});
-  tl.set(container,{autoAlpha:1});tl.from(container,1.5,{xPercent:-100,ease:Power2.out});
-  tl.from(image,1.5,{xPercent:100,scale:1.3,delay:-1.5,ease:Power2.out});})
-  ;}
+ 
+//   animateElements();
+//   $(window).scroll(animateElements);
+// };
 
 
-function updateProgress(selector, value) {
-  document.querySelector(selector).style.width = value + '%';
-}
-updateProgress('.progress-inner.branding', 96);
-updateProgress('.progress-inner.development', 90);
-updateProgress('.progress-inner.advertising', 70);
-updateProgress('.progress-inner.marketing', 94);
+// if($('.reveal').length)
+// {gsap.registerPlugin(ScrollTrigger);
+//   let revealContainers=document.querySelectorAll(".reveal");
+//   revealContainers.forEach((container)=>{let image=container.querySelector("img");
+//   let tl=gsap.timeline({scrollTrigger:{trigger:container,toggleActions:"play none none none"}});
+//   tl.set(container,{autoAlpha:1});tl.from(container,1.5,{xPercent:-100,ease:Power2.out});
+//   tl.from(image,1.5,{xPercent:100,scale:1.3,delay:-1.5,ease:Power2.out});})
+//   ;}
 
-//========== PARALLAX AREA ============= //
+
+// function updateProgress(selector, value) {
+//   document.querySelector(selector).style.width = value + '%';
+// }
+// updateProgress('.progress-inner.branding', 96);
+// updateProgress('.progress-inner.development', 90);
+// updateProgress('.progress-inner.advertising', 70);
+// updateProgress('.progress-inner.marketing', 94);
+
+
 
 })(jQuery);

@@ -6715,8 +6715,8 @@ Location:
 }
 
 .service12-section-area .service-slider .owl-nav button:hover {
-  background: #DDFA63;
-  color: #055346;
+  background: #fff;
+  color: #000;
   transition: all 0.4s;
 }
 
@@ -9379,6 +9379,16 @@ background-image: url(assets/img/bg/package-bg.png);
   position: relative;
   z-index: 1;
   background-image: url(../img/bg/header-bg14.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 0;
+}
+
+.herox-section-area {
+  position: relative;
+  z-index: 1;
+  background-image: url(../img/bg/package-bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37212,7 +37222,7 @@ html {
 
 /* ----------hero-heading---------- */
 .hero-h1{
-  font-size: 84px;
+  font-size: 20px;
   font-weight: 700;
 }
 .h1-bg{
@@ -37273,6 +37283,33 @@ html {
   }
 }
 
+@media (min-width: 768px) {
+.hero-h1{
+  font-size: 86px;
+  font-weight: 700;
+}
+}
+
+@media (min-width: 991px) {
+.hero-h1{
+  font-size: 55px;
+  font-weight: 700;
+}
+}
+
+@media (min-width: 1200px) {
+.hero-h1{
+  font-size: 70px;
+  font-weight: 700;
+}
+}
+
+@media (min-width: 1600px) {
+.hero-h1{
+  font-size: 80px;
+  font-weight: 700;
+}
+}
 /* ------------Mockup-img--------------------- */
 @media (min-width: 1600px) {
 .mock-img{
@@ -37367,4 +37404,12 @@ html {
 
 .w-logo{
   width: 300px
+}
+
+
+@media (min-width: 1200px) {
+  .lg-height {
+    height: 100vh !important;
+    object-fit: cover;
+  }
 }
